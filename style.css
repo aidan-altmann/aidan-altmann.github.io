@@ -9,6 +9,7 @@ html {
 
 nav {
     background-color: #000000;
+    text-align: center;
     position: fixed;
     top: 0;
     right: 0;
@@ -24,7 +25,6 @@ a {
 
 nav ul {
     list-style-type: none;
-text-align: center;
     margin: 0;
     padding: 0;
     padding-left: .5%;
