@@ -10,7 +10,7 @@ html {
 nav {
     background-color: #000000;
     text-align: center;
-    position: fixed;
+    position: centered;
     top: 0;
     right: 0;
     width: 100%;
