@@ -9,7 +9,7 @@ html {
 
 nav {
     background-color: #000000;
-    text-align: center;
+    text-align: centered;
     position: centered;
     top: 0;
     right: 0;
@@ -27,7 +27,7 @@ nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    padding-left: 20%;
+    padding-left: .5%;
     top: 50%;
     position: absolute;
     -ms-transform: translateY(-50%);
