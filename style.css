@@ -27,7 +27,7 @@ nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    padding-left: .5%;
+    padding-left: 20%;
     top: 50%;
     position: absolute;
     -ms-transform: translateY(-50%);
