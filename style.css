@@ -33,38 +33,7 @@ nav ul {
     transform: translateY(-50%);
 }
 
-nav li {
-    display: inline;
-    border: 2pt solid #bbb;
-}
 
-li :hover {
-    background-color: #ff0000;
-}
-
-.section, .interactive-project-section, .project-section, .map-section{
-    border: 2pt solid #677D6A;
-    margin: 2.5%;
-    padding: 1%;
-    text-align: justify;
-}
-
-.project-link {
-    background-color: #0000ff;
-    margin: 1%;
-    padding: .5%;
-x    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: fit-content;
-}
-
-img {
-    border-radius: 8px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
 }
 
 
