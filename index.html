@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <!--Presettings for webpage, scaling, font reference etc.-->
     <title>Aidan Altmann's Portfolio</title>
     <meta name="viewport" content="width=device-width, initial-scale=2.0">
     <link rel="icon" type="image/x-icon" href="/media/favicon-logo.ico">
@@ -8,8 +9,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dorsa&family=Federo&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+
   </head>
   <body>
+    <!--Topbar content, logo gif, dropdown-->
     <div class="topbar">
       <img src="/media/logo.gif" class="scaleA">
       <div class="dropdown menu-center"
@@ -23,18 +27,20 @@
             <div class="bar3"></div>
           </div>
         </button>
+        <!--Dropdown tabs-->
         <div class="dropdown-content">
           <a href="#personal-intro">About Me</a>
           <a href="#projects">Projects</a>
           <a href="#qualifications">Qualifications & Work Experience</a>
           <a href="#photography">Photography</a>
+          <a href="#experiences">Experiences</a>
           <a href="#contact">Contact</a>
         </div>
       </div>
     </div>
-
+<!--Homepage image-->
     <div class="container">
-      <img src="/media/HomePage-Pic-1.jpg" alt="home background">
+      <img src="/media/mnml-bg-test1.1.jpg" alt="home background">
       <div class="centered">
           <h1 class="title">Aidan Altmann</h1>
         <p class="subtitle">Mechanical Engineering Portfolio</p>
@@ -43,15 +49,27 @@
         
       </div>
     </div>
-  
+  <!--About me section-->
   <div class="section" id="personal-intro">
-        <h2>About me</h2>
+        <h2 style="color: #E0E0E0;">About me</h2>
         <div style="display: flex; justify-content: center; align-items: center; gap: 32px; margin: 24px 0;">
         <div style="flex: 0 0 50%; max-width: 50%; display: flex; justify-content: center;">
-          <div style="width: 100%; height: 100px; border: 2px solid #333; border-radius: 12px; background: #fff; display: flex; align-items: center; justify-content: center; font-family: 'Playfair Display', serif; color: #222; font-size: 1.2em;">
-        paragraph
+          <div style="border: 2px solid #E0E0E0; border-radius: 12px; background: #333; display: flex; align-items: center; justify-content: center; font-family: 'Playfair Display', serif; color: #E0E0E0; font-size: 1.2em; padding: 24px; width: 100%; height: auto; box-sizing: border-box; word-break: break-word; flex-direction: column;">
+            <div>
+              My name is Aidan Altmann. I recently completed my undergraduate studies at Northeastern University, with a concentration in Mechanical Engineering and a minor in Business Administration. I'm fascinated by robotics, designing consumer products, and discovering improved solutions to everyday problems people face. I’m equally passionate about developing commercial products from both an engineering and a business perspective. My choice in undergraduate disciplines reflects this sentiment, to deeply understand and excel in the technical and strategic aspects of bringing a product to market. Please click on any of the projects below to see how I fostered these interests, as well as what I’m working on now.
+            </div>
+            <hr style="width: 80%; border: 1px solid #E0E0E0; margin: 16px 0;">
+            <div>
+              <strong>Beyond Engineering:</strong>
+            </div>
+            <hr style="width: 80%; border: 1px solid #E0E0E0; margin: 16px 0;">
+        Outside of my professional work, I take great interest in film photography, language acquisition and travel, as well as competing at the amateur level in boxing and Muay Thai. For more information on these aspects of my life, please click on the photography and experiences tabs.
           </div>
         </div>
+          </div>
+        </div>
+
+        <!--Profile Image-->
         <div style="flex: 0 0 100px; display: flex; align-items: center; justify-content: center;">
           <div style="width: 100px; height: 100px; border-radius: 50%; border: 2px solid #333; background: #fff; display: flex; align-items: center; justify-content: center; font-family: 'Playfair Display', serif; color: #222; font-size: 1em;">
         profile image
@@ -61,79 +79,140 @@
     </div>
 
 
-
-     <div class="section" id="projects">
-      <h2>Projects</h2>
+<!--Projects Section-->
+    <div class="section" id="projects">
+      <h2 style="color: #E0E0E0;">Projects</h2>
       <div style="display: flex; justify-content: space-between; align-items: center; margin: 32px 0;">
-      <div style="flex: 0 0 16.66%; max-width: 16.66%; aspect-ratio: 1/1; background: #f5f5f5; border: 2px solid #333; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-family: 'Playfair Display', serif; font-size: 1.1em; color: #222;">
-        Project 1
+        <div class="project-card" style="text-align: center; display: flex; align-items: center; justify-content: center;">
+          Capstone Project: DLP Printer UV Calibration
+        </div>
+        <div class="project-card" style="text-align: center; display: flex; align-items: center; justify-content: center;">
+          Burzurker Housing Designs
+        </div>
+        <div class="project-card" style="text-align: center; display: flex; align-items: center; justify-content: center;">
+          Cibao Robotic Work Cell
+        </div>
+        <div class="project-card" style="text-align: center; display: flex; align-items: center; justify-content: center;">
+          Airpods Modification Design
+        </div>
+        <div class="project-card" style="text-align: center; display: flex; align-items: center; justify-content: center;">
+          Lo-Ra Node Experimentation
+        </div>
       </div>
-      <div style="flex: 0 0 16.66%; max-width: 16.66%; aspect-ratio: 1/1; background: #f5f5f5; border: 2px solid #333; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-family: 'Playfair Display', serif; font-size: 1.1em; color: #222;">
-        Project 2
+    </div>
+    <style>
+      .project-card {
+        flex: 0 0 16.66%;
+        max-width: 16.66%;
+        aspect-ratio: 1/1;
+        background: #333;
+        border: 2px solid #333;
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: 'Playfair Display', serif;
+        font-size: 1.1em;
+        color: #e0e0e0;
+        transition: box-shadow 0.2s, transform 0.2s;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        will-change: transform;
+        position: relative;
+        z-index: 1;
+      }
+      .project-card:hover {
+        box-shadow: 0 8px 24px rgba(0,0,0,0.18), 0 0 0 4px #E0E0E0;
+        transform: scale(1.08);
+        z-index: 2;
+      }
+    </style>
+<!--Work Experience Section-->
+    <div class="section" id="qualifications">
+     <h2>Qualifications and Work Experience</h2>
+    <div style="display: flex; justify-content: center; align-items: center; margin: 32px 0; width: 100%;">
+      <a href="/media/altmannaidanresume25.pdf" target="_blank" style="text-decoration: none; width: 50%; display: flex; justify-content: center;">
+      <div class="resume-card" style="background: #333; border: 2px solid #e0e0e0; border-radius: 12px; padding: 32px 48px; min-width: 320px; max-width: 600px; width: 100%; text-align: center; font-family: 'Playfair Display', serif; font-size: 3em; color: #e0e0e0; cursor: pointer; transition: box-shadow 0.2s, transform 0.2s;">
+        <strong>Resume</strong>
       </div>
-      <div style="flex: 0 0 16.66%; max-width: 16.66%; aspect-ratio: 1/1; background: #f5f5f5; border: 2px solid #333; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-family: 'Playfair Display', serif; font-size: 1.1em; color: #222;">
-        Project 3
-      </div>
-      <div style="flex: 0 0 16.66%; max-width: 16.66%; aspect-ratio: 1/1; background: #f5f5f5; border: 2px solid #333; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-family: 'Playfair Display', serif; font-size: 1.1em; color: #222;">
-        Project 4
-      </div>
-      <div style="flex: 0 0 16.66%; max-width: 16.66%; aspect-ratio: 1/1; background: #f5f5f5; border: 2px solid #333; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-family: 'Playfair Display', serif; font-size: 1.1em; color: #222;">
-        Project 5
-      </div>
-      </div>
-     </div>
-
-     <div class="section" id="qualifications">
-      <h2>Qualifications and Work Experience</h2>
-      <div style="display: flex; justify-content: center; margin: 32px 0;">
-      <div style="background: #fff; border: 2px solid #333; border-radius: 12px; padding: 32px 48px; min-width: 320px; max-width: 600px; width: 100%; text-align: center; font-family: 'Playfair Display', serif; font-size: 1.2em; color: #222;">
-        Resume Hyperlink
-      </div>
-      </div>
-     </div>
-
+      </a>
+    </div>
+    <style>
+      .resume-card:hover {
+      box-shadow: 0 8px 32px rgba(224,224,224,0.18), 0 0 0 4px #e0e0e0;
+      transform: scale(1.08);
+      z-index: 2;
+      }
+    </style>
+    </div>
+<!-- Photography Section -->
      <div class="section" id="photography">
       <h2>Photography</h2>
       <div style="display: flex; justify-content: center; align-items: center; gap: 32px; margin: 24px 0;">
       <div style="flex: 0 0 50%; max-width: 50%; display: flex; justify-content: center;">
-        <div style="width: 100%; height: 100px; border: 2px solid #333; border-radius: 12px; background: #fff; display: flex; align-items: center; justify-content: center; font-family: 'Playfair Display', serif; color: #222; font-size: 1.2em;">
-        paragraph
+        <div style="width: 100%; min-height: 120px; border: 2px solid #e0e0e0; border-radius: 12px; background: #333; display: flex; align-items: flex-start; justify-content: center; font-family: 'Playfair Display', serif; color: #e0e0e0; font-size: 1.1em; padding: 24px; box-sizing: border-box; word-break: break-word; text-align: left; line-height: 1.6;">
+          Learning from my older brother, who taught me many skills in my life, I've been practicing film photography the last couple of years. Documenting my life experiences and travels through this medium, I began a photography account on Instagram. After requests of interest in purchasing prints of my work, I opened up an online shop and portfolio site for my work. Please click on the link here to see more.
         </div>
       </div>
+
+      
       <div style="flex: 0 0 100px; display: flex; align-items: center; justify-content: center;">
-        <div style="width: 100px; height: 100px; border-radius: 50%; border: 2px solid #333; background: #fff; display: flex; align-items: center; justify-content: center; font-family: 'Playfair Display', serif; color: #222; font-size: 1em;">
-        link to photo site
+        <div class="resume-card"  style="width: 100px; height: 100px; border-radius: 50%; border: 2px solid #e0e0e0; background: #000; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: box-shadow 0.2s, transform 0.2s;">
+          <img src="/media/camera.jpg" alt="Camera" style="width: 90px; height: 90px; border-radius: 100%;">
         </div>
       </div>
       </div>
      </div>
 
+     <!-- Experiences Section -->
+  <div class="section" id="experiences">
+    <!-- Temporary cutout until further worked on
+      <h2>Experiences</h2>
+      <div style="width: 60%; margin: 0 auto; background: #333; border: 2px solid #e0e0e0; border-radius: 16px; padding: 32px; display: flex; flex-direction: column; align-items: center; box-shadow: 0 4px 16px rgba(0,0,0,0.07);">
+        <div style="font-family: 'Playfair Display', serif; font-size: 1.1em; color: #e0e0e0; text-align: center; line-height: 1.7; word-break: break-word; max-width: 100%; margin: 0 auto;"></div>
+          When I’m not working on my projects or coursework, I travel wherever I can. I love exploring new places, meeting new people, and learning new languages and skills. Having now been to 26 countries, here is a map of everywhere I have visited so far, with some key locations going further in depth on what I gained from visiting there.
+        </div>
+      </div>
+    -->
+     <!-- Contact Section-->
      <div class="section" id="contact">
       <h2>Contact</h2>
-      <div style="width: 60%; margin: 0 auto; background: #fff; border: 2px solid #333; border-radius: 16px; padding: 40px 0; display: flex; flex-direction: column; align-items: center; box-shadow: 0 4px 16px rgba(0,0,0,0.07);">
-      <div style="font-family: 'Playfair Display', serif; font-size: 2em; color: #222; text-align: center;">
-        business card
+
+<!-- Business Card -->
+      <div style="width: 60vw; max-width: 100%; margin: 0 auto; display: flex; justify-content: center; align-items: center;">
+        <img src="/media/business-card-1.0.png" alt="Business Card" style="width: 100%; height: auto; border-radius: 12px; display: block;">
       </div>
+
+<!-- buttons-->
       <div style="display: flex; justify-content: center; gap: 48px; margin-top: 32px;">
-        
       </div>
       </div>
       <div style="position: relative; width: 100%; height: 180px; margin: 48px 0;">
-      <div style="position: absolute; left: 20%; top: 50%; transform: translate(-50%, -50%);">
-        <div style="width: 100px; height: 100px; border-radius: 50%; border: 2px solid #333; background: #fff; display: flex; align-items: center; justify-content: center; font-family: 'Playfair Display', serif; color: #222; font-size: 1.1em;">
-        LinkedIn
+      <a href="https://www.linkedin.com/in/aidan-altmann/" target="_blank" class="contact-popout" style="position: absolute; left: 20%; top: 50%; transform: translate(-50%, -50%); text-decoration: none;">
+        <div style="width: 100px; height: 100px; border-radius: 50%; border: 2px solid #e0e0e0; background: #000; display: flex; align-items: center; justify-content: center; transition: box-shadow 0.2s, transform 0.2s;">
+          <img src="/media/linkedin-logo.png" alt="LinkedIn Logo" style="width: 80px; height: 80px; border-radius: 50%;">
         </div>
-      </div>
-      <div style="position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);">
-        <div style="width: 100px; height: 100px; border-radius: 50%; border: 2px solid #333; background: #fff; display: flex; align-items: center; justify-content: center; font-family: 'Playfair Display', serif; color: #222; font-size: 1.1em;">
-        Email
+      </a>
+
+      <a href="mailto:aidan.altmann@gmail.com" class="contact-popout" style="position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); text-decoration: none;">
+        <div style="width: 100px; height: 100px; border-radius: 50%; border: 2px solid #e0e0e0; background: #000; display: flex; align-items: center; justify-content: center; transition: box-shadow 0.2s, transform 0.2s;">
+          <img src="/media/Gmail-logo.jpg" alt="Gmail Logo" style="width: 80px; height: 80px; border-radius: 50%;">
         </div>
-      </div>
-      <div style="position: absolute; left: 80%; top: 50%; transform: translate(-50%, -50%);">
-        <div style="width: 100px; height: 100px; border-radius: 50%; border: 2px solid #333; background: #fff; display: flex; align-items: center; justify-content: center; font-family: 'Playfair Display', serif; color: #222; font-size: 1.1em;">
-        Instagram
+      </a>
+
+      <a href="https://www.instagram.com/aidan.altmann/" target="_blank" class="contact-popout" style="position: absolute; left: 80%; top: 50%; transform: translate(-50%, -50%); text-decoration: none;">
+        <div style="width: 100px; height: 100px; border-radius: 50%; border: 2px solid #e0e0e0; background: #000; display: flex; align-items: center; justify-content: center; transition: box-shadow 0.2s, transform 0.2s;">
+          <img src="/media/instagram-logo.jpg" alt="Instagram Logo" style="width: 80px; height: 80px; border-radius: 50%;">
         </div>
-      </div>
+      </a>
+      <style>
+        .contact-popout > div:hover {
+          box-shadow: 0 8px 32px rgba(224,224,224,0.18), 0 0 0 4px #e0e0e0;
+          transform: scale(1.12);
+          z-index: 2;
+        }
+      </style>
+
+
       </div>
      </div>
   
@@ -213,6 +292,7 @@
     </div>
   </div>
 </div>
+-->
   
 
     <script>
