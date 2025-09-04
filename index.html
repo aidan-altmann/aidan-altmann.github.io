@@ -83,24 +83,42 @@
     <div class="section" id="projects">
       <h2 style="color: #E0E0E0;">Projects</h2>
       <div style="display: flex; justify-content: space-between; align-items: center; margin: 32px 0;">
-        <div class="project-card" style="text-align: center; display: flex; align-items: center; justify-content: center;">
+        <div class="project-card" onclick="openProjectPopup(0)" style="text-align: center; display: flex; align-items: center; justify-content: center;">
           Capstone Project: DLP Printer UV Calibration
         </div>
-        <div class="project-card" style="text-align: center; display: flex; align-items: center; justify-content: center;">
+        <div class="project-card" onclick="openProjectPopup(1)" style="text-align: center; display: flex; align-items: center; justify-content: center;">
           Burzurker Housing Designs
         </div>
-        <div class="project-card" style="text-align: center; display: flex; align-items: center; justify-content: center;">
+        <div class="project-card" onclick="openProjectPopup(2)" style="text-align: center; display: flex; align-items: center; justify-content: center;">
           Cibao Robotic Work Cell
         </div>
-        <div class="project-card" style="text-align: center; display: flex; align-items: center; justify-content: center;">
+        <div class="project-card" onclick="openProjectPopup(3)" style="text-align: center; display: flex; align-items: center; justify-content: center;">
           Airpods Modification Design
         </div>
-        <div class="project-card" style="text-align: center; display: flex; align-items: center; justify-content: center;">
+        <div class="project-card" onclick="openProjectPopup(4)" style="text-align: center; display: flex; align-items: center; justify-content: center;">
           Lo-Ra Node Experimentation
         </div>
       </div>
-    </div>
-    <style>
+      <!-- Project Popups -->
+      <div id="project-popup-overlay" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.55); z-index:1000;">
+        <div id="project-popup" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: #333; border-radius: 16px; box-shadow: 0 8px 32px rgba(0,0,0,0.25); width: 80vw; max-width: 900px; min-width: 80vw; min-height: 70vh; display: flex; flex-direction: row; overflow: hidden;">
+          <!-- Left half: text, #222 -->
+          <div id="project-popup-text" style="flex: 1 1 0; max-width: 50%; padding: 32px; color: #e0e0e0; font-family: 'Playfair Display', serif; font-size: 1.1em; display: flex; flex-direction: column; align-items: center; background: #222; position: relative;">
+        <div id="project-popup-title" style="width: 100%; text-align: center; font-size: 1.5em; font-weight: bold; margin-bottom: 24px;"></div>
+        <!-- Text inserted by JS -->
+          </div>
+          <!-- Right half: image, #333 -->
+          <div style="flex: 1 1 0; max-width: 50%; background: #333; display: flex; align-items: center; justify-content: center; position: relative;">
+        <img id="project-popup-img" src="" alt="Project Image" style="width: 90%; height: auto; border-radius: 12px; box-shadow: 0 2px 16px rgba(0,0,0,0.18);">
+          </div>
+        <button onclick="closeProjectPopup()" style="position: absolute; top: 16px; right: 16px; background: #222; color: #e0e0e0; border: none; border-radius: 50%; width: 32px; height: 32px; font-size: 1.5em; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: background 0.2s;">
+          &times;
+        </button>
+          </div>
+        </div>
+      </div>
+        </div>
+        <style>
       .project-card {
         flex: 0 0 16.66%;
         max-width: 16.66%;
@@ -119,12 +137,79 @@
         will-change: transform;
         position: relative;
         z-index: 1;
+        cursor: pointer;
       }
       .project-card:hover {
         box-shadow: 0 8px 24px rgba(0,0,0,0.18), 0 0 0 4px #E0E0E0;
         transform: scale(1.08);
         z-index: 2;
       }
+      #project-popup-overlay {
+        animation: fadeIn 0.2s;
+      }
+      @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+      }
+      #project-popup button:hover {
+        background: #444;
+      }
+      @media (max-width: 750px) {
+        #project-popup {
+          flex-direction: column;
+          width: 96vw;
+          min-width: 0;
+        }
+        #project-popup > div {
+          max-width: 100% !important;
+        }
+      }
+        </style>
+        <script>
+      // Project data
+      const projectData = [
+        {
+          text: "<strong>Capstone Project: DLP Printer UV Calibration</strong><br>For my capstone project, I was part of a team of 6 undergraduate students tackling the issue of UV calibration in resin 3D printer projector screens. A common issue in these printers is a discrepancy in UV light output across the projector screen. The result of this is a strong variance in the quality of prints, either with overcured, brittle prints or undercured, malformed prints depending on where on the projector screen the print was cured. \n\n <br> <br> Our solution was developing an inverse kinematic arm system, placed on top of the printer surface. The movement of this system is driven by a pair of rail-mounted pulleys on each side of the baseplate. At the convergence of these arms is where the sensor and its housing reside, so that as the pulleys slide the arms up and down the rail, the sensor snakes across the projector area and maps UV intensity. The result of this sensor mapping is a UV intensity map created in MATLAB to show where there are nonuniformities throughout the projector screen. This mapped image can be used to create a greyscale correction film to ensure UV intensity is consistent across the projector screen. \n",
+          img: "/media/capstone-image.png"
+        },
+        {
+          text: "<strong>Burzurker Housing Designs</strong><br>Working alongside Non Lethal Labs, I got to create several housing designs for their Burzurker and Screech sonic defense devices. These housing designs were specifically tailored to match the aesthetics and values of brands NLL was in talks to collaborate with. ",
+          img: "/media/burzurker-housing.jpg"
+        },
+        {
+          text: "<strong>Cibao Robotic Work Cell</strong><br>My work at Electron Robotics was primarily focused towards working on the construction of a work cell for Cibao Meats. This work cell utilizes an ABB robotic arm, fitted with several cameras on the arm and work cell and an Cambrian Robotics AI vision system, to recognize a variety of meat products and place them onto a conveyor belt. <br> <br>My contributions to this project were the creation of 3D models used for the AI vision system to reference for recognition, creating a variety of variants of the models as well to account for natural deformations in the products. Beyond this, I was entrusted with designing several components for the work cell and was one of the primary team members on the assembly and installation of the work cell at Cibao’s factory. ",
+          img: "/media/cibao-work-cell.png"
+        },
+        {
+          text: "<strong>Airpods Modification Design</strong><br>In my free-time, I enjoy using my own resin 3D printer for my side projects, one of my primary ones being modifying my Airpods Pro. Using 3D scans of the current Airpods Pro case I found online, I’ve gone through several iterations of translucent resin prints of the case, which I then replace the stock casing with. In order to this, I have dissected and carefully studied Apple’s manufacturing on the internal components of Airpods, researched how best to dissolve and remove these parts without damaging the electronics, and carefully reconstructed these internal components back into my own printed casing. The result is this ‘skeleton’ style version of Airpods. My goal is to perfect this process in terms of cleanliness and quality where I can reliably create more of these airpods cases and improve upon the design further with coloring of the translucent case and other modifications.",
+            img: "/media/airpods-mod.png",
+      
+          },
+        {
+          text: "<strong>Lo-Ra Node Experimentation</strong><br>During my undergraduate education, I became acquainted with a startup in Brooklyn called Project Owl, which uses a Lo-Ra WAN mesh system to read data across a wide span of an area. I found this technology fascinating and through the relationship I built with the members of the company, learned more about Lo-Ra technology and currently have just begun experimenting with own system, with the intent of understanding how much information can be shared through a node system and what applications it can serve. ",
+          img: "/media/project-lora.jpg"
+        }
+      ];
+
+      function openProjectPopup(idx) {
+        document.getElementById('project-popup-text').innerHTML = projectData[idx].text;
+        document.getElementById('project-popup-img').src = projectData[idx].img;
+        document.getElementById('project-popup-overlay').style.display = 'block';
+        document.body.style.overflow = 'hidden';
+      }
+      function closeProjectPopup() {
+        document.getElementById('project-popup-overlay').style.display = 'none';
+        document.body.style.overflow = '';
+      }
+      // Optional: close popup on overlay click (not on popup itself)
+      document.getElementById('project-popup-overlay').addEventListener('click', function(e) {
+        if (e.target === this) closeProjectPopup();
+      });
+      // Optional: close popup on ESC key
+      document.addEventListener('keydown', function(e) {
+        if (e.key === "Escape") closeProjectPopup();
+      });
+        </script>
     </style>
 <!--Work Experience Section-->
     <div class="section" id="qualifications">
