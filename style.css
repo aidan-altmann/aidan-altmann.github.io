@@ -68,6 +68,25 @@ img {
   font-size: 16px;
   border: none;
   cursor: pointer;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+/* Center the topbar horizontally */
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center content horizontally */
+  padding: 0 2rem;
+  background: #000;
+  width: 100%;
+  box-sizing: border-box;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 32px 48px -16px rgba(18,18,18,0.95);
 }
 
 .dropdown {
@@ -156,14 +175,46 @@ img {
 .topbar {
   display: flex;
   align-items: center;
-  justify-content: space-between; /* Pushes logo left, menu right */
-  padding: 0 2rem;
-  background:#000;
-  width: 100%;
-  box-sizing: border-box;
+  justify-content: center; /* Center all content horizontally */
+  flex-wrap: nowrap;
   position: sticky;
   top: 0;
   z-index: 10;
+  padding: 0 2rem;
+  background: #000;
+  width: 100%;
+  box-sizing: border-box;
+  box-shadow: 0 32px 48px -16px rgba(18,18,18,0.95);
+}
+
+.topbar > .menu-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin: 0 auto;
+  width: auto;
+}
+
+.menu-center .dropdown-content {
+  left: 50%;
+  transform: translateX(-50%);
+  top: 100%; /* Position dropdown at the bottom of the topnav bar */
+  position: absolute;
+}
+
+.topbar::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 48px; /* Increased height for more noticeable fade */
+  pointer-events: none;
+  background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(18,18,18,0.95) 100%);
+  z-index: 11;
 }
 
 .scaleA {
@@ -192,4 +243,16 @@ h2, h3, h4, h5, h6 {
   margin-top: 1.5rem;
   margin-bottom: 1rem;
   letter-spacing: 0.08em;
+}
+
+/* Fade-in animation for site load */
+body {
+  opacity: 0;
+  animation: fadeInBody 1.2s ease-in forwards;
+}
+
+@keyframes fadeInBody {
+  to {
+    opacity: 1;
+  }
 }
